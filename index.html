@@ -29,14 +29,14 @@
   </header>
 
   <main>
-    <section id="section-home" class="section-home">
+    <section id="section-home" class= "section section-home">
       <h1>OLÁ, MEU NOME É MONIQUE LUPE</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis tempora explicabo quae quod deserunt eius
         sapiente solutions for complex problems</p>
       <div class="btn"><a href="">PROJETOS</a></div>
     </section>
 
-    <section id="section-about-me" class="section-about-me">
+    <section id="section-about-me" class="section section-about-me">
       <h2>SOBRE MIM</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis tempora explicabo quae quod deserunt eius
         sapiente</p>
@@ -66,27 +66,82 @@
         </div>
       </div>
     </section>
-
-    <section id="section-projects" class="section-projects">
-      <div>
-        <h3>Projetos que realizei</h3>
+    <section class="section section-projects" id="section-projects">
+        <h2>Projetos</h2>
+        <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis tempora explicabo quae
+          quod deserunt eius sapiente</p>
+  
         <ul>
-          <li>Studio Ghibli Museum</li>
-          <li>Dev Tube</li>
-          <li>Music Go - rede social</li>
-          <li>Validação de cartão de crédito</li>
-          
+          <li>
+            <div class="project-img">
+              <img style="width: 100%;" src="./assets/project-mockup-example.jpeg" alt="Project mockup">
+            </div>
+            <div class="project-content">
+              <h3>DevTube</h3>
+              <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis tempora, explicabo
+                quae quod
+                deserunt eius sapiente praesentium.</p>
+              <a class="btn">Case study</a>
+            </div>
+          </li>
+  
+          <li>
+            <div class="project-img">
+              <img style="width: 100%;" src="./assets/project-mockup-example.jpeg" alt="Project mockup">
+            </div>
+            <div class="project-content">
+              <h3>Studio Ghibli Museum</h3>
+              <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis tempora, explicabo
+                quae quod
+                deserunt eius sapiente praesentium.</p>
+              <a class="btn">Case study</a>
+            </div>
+          </li>
+  
+          <li>
+            <div class="project-img">
+              <img style="width: 100%;" src="./assets/project-mockup-example.jpeg" alt="Project mockup">
+            </div>
+            <div class="project-content">
+              <h3>Music Go!</h3>
+              <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis tempora, explicabo
+                quae quod
+                deserunt eius sapiente praesentium.</p>
+              <a class="btn">Case study</a>
+            </div>
+          </li>
         </ul>
-      </div>
-    
     </section>
+    <section id="section-contact" class="section section-contact">
+      <h2>Contact</h2>
+      <p class="subtitle">Lorem ipsum dolor sit amet consectetur 
+        adipisicing elit. Hic facilis tempora, explicabo quae quod deserunt 
+        eius sapiente praesentium.</p>
+      <form>
+        <div>
+          <label for="nome">
+            Nome:
+          </label>
+          <input type="text" name="nome" id="" placeholder="Digite o seu nome">
+        </div>
+        <div>
+          <label for="email">
+            E-mail:
+          </label>
+          <input type="email" name="nome" id="" placeholder="Digite o seu email">
+        </div>
+        <div>
+          <label for="textarea">
+            Escreva sua mensagem:
+          </label>
+          <textarea required="" cols="30" rows="10" class="contact__form-input" 
+          placeholder="Enter Your Message" name="message" id="message"></textarea>
+        </div>
+        <button type="submit" class="btn">Enviar</button>
+        
 
-    <section id="section-contact" class="section-contact">
-
-
+      </form>  
     </section>
-
-
   </main>
   <footer></footer>
 

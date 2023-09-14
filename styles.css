@@ -17,14 +17,12 @@ body {
 }
 
 .btn {
-  color: #fff;
-  padding: 1.2rem 3rem;
-  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   display: inline-block;
   font-weight: 700;
   border-radius: 5px;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
   transition: transform .3s;
 }
 
@@ -38,9 +36,10 @@ body {
   color: #777;
   font-size: 1.4rem;
   font-weight: 500;
-  max-width: 80rem;
   margin: auto;
   line-height: 1.6;
+  text-align: center;
+  margin: 0px 150px;
 }
 
 .paragraph {
@@ -50,17 +49,46 @@ body {
   line-height: 1.7;
 }
 
+.section {
+  padding: 10% 5%;
+}
+
+h1 {
+  font-size: 3.6rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  font-weight: bold;
+}
+
 h2 {
   font-size: 2.6rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: bold;
+  text-align: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  top: calc(100% + 1.5rem);
+  height: 5px;
+  width: 2rem;
+  background: #0062b9;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
 }
 
 h3 {
   font-weight: 700;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
+
+/* header */
 
 header {
   display: flex;
@@ -68,8 +96,6 @@ header {
   padding: 0px 30px;
   font-weight: 700;
 }
-
-header>nav {}
 
 nav>ul {
   display: flex;
@@ -95,8 +121,13 @@ header .header-profile>.avatar-img {
 }
 
 .section-home {
-  background-color: #437ec3;
-  padding: 20% 5%;
+  background: linear-gradient(to right,
+      rgba(0, 98, 185, 0.8),
+      rgba(0, 98, 185, 0.8)),
+    url(./assets/common-bg.svg);
+  background-position: center;
+
+  padding: 15% 10%;
   align-items: center;
   display: grid;
   grid-template-rows: auto auto auto;
@@ -105,40 +136,28 @@ header .header-profile>.avatar-img {
   color: white;
 }
 
-.section-home>h1 {
-  font-size: 50px;
+/* section home */
+
+.section-home>p {
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin: 0px 50px;
 }
 
-.section-home>.btn {
-  display: flex;
-  justify-content: center;
-}
-
-.section-home>.btn>a {
+.section-home .btn {
   background-color: white;
   color: black;
-  padding: 20px 70px;
-  border-radius: 7px;
-  font-weight: 700;
+  padding: 1.4rem 6rem;
+  font-size: 1.2rem;
 }
 
 /* section about me */
 
-.section-about-me,
-.section-projects {
+.section-about-me {
   background-color: #f7f7f7;
   display: block;
   text-align: center;
-  padding: 10% 5%;
-}
-
-.section-about-me>h2 {
-  position: relative;
-  margin-bottom: 50px;
-}
-
-.section-about-me>p {
-  margin: 0px 150px;
 }
 
 .section-about-me-content {
@@ -168,14 +187,89 @@ header .header-profile>.avatar-img {
   color: #777;
 }
 
-.section-about-me>h2::after {
-  content: '';
-  position: absolute;
-  top: calc(100% + 1.5rem);
-  height: 5px;
-  width: 2rem;
-  background: #0062b9;
-  left: 50%;
-  transform: translateX(-50%);
+/* section projects */
+
+.section-projects>ul li {
+  display: grid;
+  grid-template-columns: 1fr 40%;
+  column-gap: 50px;
+  margin-bottom: 2px;
+}
+
+.section-projects .project-content {
+  display: flex;
+  row-gap: 30px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.section-projects ul {
+  margin-top: 100px;
+}
+
+.section-projects ul li+li {
+  margin-top: 50px;
+}
+
+.section-contact {
+  background: linear-gradient(to right,
+  rgba(0, 98, 185, 0.8),
+  rgba(0, 98, 185, 0.8)),
+  url(./assets/common-bg.svg);
+  background-position: center;
+}
+
+.section-contact>h2,
+.subtitle {
+  color: #fff;
+}
+
+.section-contact>h2::after {
+  background: #fff;
+}
+
+.section-contact>form {
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background: white;
+  padding: 4rem;
+  margin-top: 6rem;
   border-radius: 5px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+form>div {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  color: #666;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+form input,
+textarea {
+  color: #333;
+  padding: 2rem;
+  border: 1px solid #ebebeb;
+  font-size: 0.9rem;
+  letter-spacing: 0px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+button {
+  border: none;
+  outline: inherit;
+}
+
+form button {
+  align-self: flex-end;
 }
