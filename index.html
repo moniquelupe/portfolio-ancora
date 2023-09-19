@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
@@ -27,6 +27,8 @@
         <li><a href="#section-contact">CONTATO</a></li>
       </ul>
     </nav>
+
+    <i class="fa fa-bars" aria-hidden="true"></i>
   </header>
 
   <main>
@@ -34,23 +36,26 @@
       <h1>OLÁ, MEU NOME É MONIQUE LUPE</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis tempora explicabo quae quod deserunt eius
         sapiente solutions for complex problems</p>
-      <div class="btn"><a href="">PROJETOS</a></div>
+      <div><a class="btn" href="">PROJETOS</a></div>
     </section>
 
     <section class="section section-about-me" id="section-about-me">
       <h2>SOBRE MIM</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis tempora explicabo quae quod deserunt eius
+      <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Hic facilis tempora explicabo quae quod deserunt eius
         sapiente</p>
 
       <div class="section-about-me-content">
         <div>
           <h3>Saiba mais sobre a minha trajetória</h3>
-          <p class="paragraph" style="margin-bottom: 10px"></p>Hey! It's Monique Lupe and I'm a Frontend Web Developer located in Recife - PE, Brazil. 
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis tempora 
-            explicabo quae quod deserunt eius sapiente</p>
-            <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis tempora explicabo 
+          <p class="paragraph">Hey! It's Monique Lupe and I'm a Frontend Web Developer located
+            in Recife. I've done remote projects for
+            agencies, consulted for startups, and collaborated with 
+            talented people to create digital products for both
+            business and consumer use.</p>
+          <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis tempora explicabo 
             quae quod deserunt eius sapiente solutions for complex.</p>
-            <a href="" class="btn" style="margin-top: 30px;">Contato</a>
+          <a href="" class="btn" style="margin-top: 30px;">Contato</a>
         </div>
 
         <div>
@@ -132,14 +137,21 @@
           <label for="email">
             E-mail:
           </label>
-          <input type="email" name="nome" id="" placeholder="Digite o seu email">
+          <input 
+          type="email" 
+          name="nome" 
+          id="" 
+          placeholder="Digite o seu email">
         </div>
         <div>
-          <label for="textarea">
+          <label for="message">
             Escreva sua mensagem:
           </label>
-          <textarea required="" cols="30" rows="10" class="contact__form-input" 
-          placeholder="Enter Your Message" name="message" id="message"></textarea>
+          <textarea 
+          required="" 
+          rows="10" 
+          placeholder="Digite sua mensagem" 
+          name="message"></textarea>
         </div>
         <button type="submit" class="btn">Enviar</button>
       </form>  

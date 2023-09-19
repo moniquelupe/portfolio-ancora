@@ -4,6 +4,19 @@
   list-style: none;
 }
 
+hmtl {
+  scroll-behavior: smooth;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  border: none;
+  outline: inherit;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -13,17 +26,21 @@ body {
   height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .btn {
+  background: #993399;
+  color: #fff;
+  padding: 1.2rem 3rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   display: inline-block;
   font-weight: 700;
   border-radius: 5px;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
-  transition: transform .3s;
+  transition: transform 0.3s;
 }
 
 .btn:hover {
@@ -39,18 +56,17 @@ body {
   margin: auto;
   line-height: 1.6;
   text-align: center;
-  margin: 0px 150px;
+  margin: 0px 10rem;
 }
 
 .paragraph {
   font-size: 1.2rem;
-  color: grey;
-  max-width: 60rem;
+  color: #777;
   line-height: 1.7;
 }
 
 .section {
-  padding: 10% 5%;
+  padding: 10% 5%; /* substituir por medida em rem 10rem e 5rem */
 }
 
 h1 {
@@ -72,12 +88,12 @@ h2 {
 }
 
 h2::after {
-  content: '';
+  content: "";
   position: absolute;
   top: calc(100% + 1.5rem);
   height: 5px;
   width: 2rem;
-  background: #0062b9;
+  background: #993399;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 5px;
@@ -103,16 +119,20 @@ header {
   font-weight: 700;
 }
 
-nav>ul {
+header i {
+  display: none !important;
+}
+
+nav > ul {
   display: flex;
 }
 
-nav>ul a {
+nav > ul a {
   display: block;
   padding: 35px 20px;
 }
 
-header .header-profile>.avatar-img {
+header .header-profile > .avatar-img {
   width: 40px;
   height: 40px;
   border: 1px solid black;
@@ -127,10 +147,7 @@ header .header-profile>.avatar-img {
 }
 
 .section-home {
-  background: linear-gradient(to right,
-      rgba(0, 98, 185, 0.8),
-      rgba(0, 98, 185, 0.8)),
-    url(./assets/common-bg.svg);
+  background: #993399;
   background-position: center;
 
   padding: 15% 10%;
@@ -139,12 +156,12 @@ header .header-profile>.avatar-img {
   grid-template-rows: auto auto auto;
   row-gap: 50px;
   text-align: center;
-  color: white;
+  color: #fff;
 }
 
 /* section home */
 
-.section-home>p {
+.section-home > p {
   color: #fff;
   font-size: 1.6rem;
   line-height: 1.6;
@@ -183,7 +200,7 @@ header .header-profile>.avatar-img {
   flex-wrap: wrap;
 }
 
-.section-about-me-content ul>li {
+.section-about-me-content ul > li {
   padding: 1rem 2rem;
   margin-bottom: 1rem;
   margin-right: 1rem;
@@ -195,7 +212,7 @@ header .header-profile>.avatar-img {
 
 /* section projects */
 
-.section-projects>ul li {
+.section-projects > ul li {
   display: grid;
   grid-template-columns: 1fr 40%;
   column-gap: 50px;
@@ -214,29 +231,26 @@ header .header-profile>.avatar-img {
   margin-top: 100px;
 }
 
-.section-projects ul li+li {
+.section-projects ul li + li {
   margin-top: 50px;
 }
 
 .section-contact {
-  background: linear-gradient(to right,
-  rgba(0, 98, 185, 0.8),
-  rgba(0, 98, 185, 0.8)),
-  url(./assets/common-bg.svg);
+  background: #993399;
   background-position: center;
 }
 
-.section-contact>h2,
+.section-contact > h2,
 .subtitle {
   color: #fff;
 }
 
-.section-contact>h2::after {
+.section-contact > h2::after {
   background: #fff;
 }
 
-.section-contact>form {
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+.section-contact > form {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background: white;
   padding: 4rem;
   margin-top: 6rem;
@@ -246,7 +260,7 @@ header .header-profile>.avatar-img {
   flex-direction: column;
 }
 
-form>div {
+form > div {
   display: flex;
   flex-direction: column;
 }
@@ -288,7 +302,7 @@ footer {
   padding: 0px 8%;
 }
 
-footer>.footer-top {
+footer > .footer-top {
   display: flex;
   justify-content: space-between;
   padding: 7% 0;
@@ -298,7 +312,7 @@ footer>.footer-top {
   margin-bottom: 1.6rem;
 }
 
-.footer-top>div:first-child {
+.footer-top > div:first-child {
   width: 40%;
 }
 
