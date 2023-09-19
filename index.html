@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Monique Lupe</title>
 </head>
 
@@ -23,20 +24,20 @@
         <li><a href="#section-home">INÍCIO</a></li>
         <li><a href="#section-about-me">SOBRE MIM</a></li>
         <li><a href="#section-projects">PROJETOS</a></li>
-        <li><a href="section-contact">CONTATO</a></li>
+        <li><a href="#section-contact">CONTATO</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section id="section-home" class= "section section-home">
+    <section class= "section section-home" id="section-home">
       <h1>OLÁ, MEU NOME É MONIQUE LUPE</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis tempora explicabo quae quod deserunt eius
         sapiente solutions for complex problems</p>
       <div class="btn"><a href="">PROJETOS</a></div>
     </section>
 
-    <section id="section-about-me" class="section section-about-me">
+    <section class="section section-about-me" id="section-about-me">
       <h2>SOBRE MIM</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis tempora explicabo quae quod deserunt eius
         sapiente</p>
@@ -44,11 +45,12 @@
       <div class="section-about-me-content">
         <div>
           <h3>Saiba mais sobre a minha trajetória</h3>
-          <p>Hey! It's Monique Lupe and I'm a Frontend Web Developer located in Recife - PE, Brazil. 
+          <p class="paragraph" style="margin-bottom: 10px"></p>Hey! It's Monique Lupe and I'm a Frontend Web Developer located in Recife - PE, Brazil. 
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis tempora 
             explicabo quae quod deserunt eius sapiente</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis tempora explicabo 
+            <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis tempora explicabo 
             quae quod deserunt eius sapiente solutions for complex.</p>
+            <a href="" class="btn" style="margin-top: 30px;">Contato</a>
         </div>
 
         <div>
@@ -66,6 +68,7 @@
         </div>
       </div>
     </section>
+
     <section class="section section-projects" id="section-projects">
         <h2>Projetos</h2>
         <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis tempora explicabo quae
@@ -112,7 +115,8 @@
           </li>
         </ul>
     </section>
-    <section id="section-contact" class="section section-contact">
+
+    <section class="section section-contact" id="section-contact">
       <h2>Contact</h2>
       <p class="subtitle">Lorem ipsum dolor sit amet consectetur 
         adipisicing elit. Hic facilis tempora, explicabo quae quod deserunt 
@@ -138,12 +142,35 @@
           placeholder="Enter Your Message" name="message" id="message"></textarea>
         </div>
         <button type="submit" class="btn">Enviar</button>
-        
-
       </form>  
     </section>
   </main>
-  <footer></footer>
+
+  <footer>
+    <div class="footer-top">
+      <div>
+        <h4>Monique Lupe</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit facilis tempora explicabo quae quod deserunt</p>
+      </div>
+
+      <div>
+        <h4>Social</h4>
+        <div>
+          <a href="" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+          <a href="" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>
+        © Copyright 2023. Made by Monique Lupe with a Open-Source Project Template from
+        <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com">
+          <strong>Ram Maheshwari</strong>
+        </a>
+      </span>
+    </div>
+  </footer>
 
 </body>
 
