@@ -2,6 +2,7 @@
   margin: 0px;
   padding: 0px;
   list-style: none;
+  box-sizing: border-box;
 }
 
 hmtl {
@@ -26,7 +27,8 @@ body {
   height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  position: relative;
 }
 
 .btn {
@@ -117,10 +119,18 @@ header {
   justify-content: space-between;
   padding: 0px 30px;
   font-weight: 700;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background-color: #fff;
 }
 
 header i {
   display: none !important;
+}
+
+header .fa {
+  display: none;
 }
 
 nav > ul {
@@ -132,7 +142,7 @@ nav > ul a {
   padding: 35px 20px;
 }
 
-header .header-profile > .avatar-img {
+header .header-profile>.avatar-img {
   width: 40px;
   height: 40px;
   border: 1px solid black;
@@ -145,6 +155,8 @@ header .header-profile > .avatar-img {
   display: flex;
   align-items: center;
 }
+
+/* section home */
 
 .section-home {
   background: #993399;
@@ -161,7 +173,7 @@ header .header-profile > .avatar-img {
 
 /* section home */
 
-.section-home > p {
+.section-home>p {
   color: #fff;
   font-size: 1.6rem;
   line-height: 1.6;
@@ -231,13 +243,17 @@ header .header-profile > .avatar-img {
   margin-top: 100px;
 }
 
-.section-projects ul li + li {
+.section-projects ul li+li {
   margin-top: 50px;
 }
+
+/* section contact */
 
 .section-contact {
   background: #993399;
   background-position: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .section-contact > h2,
@@ -249,7 +265,7 @@ header .header-profile > .avatar-img {
   background: #fff;
 }
 
-.section-contact > form {
+.section-contact>form {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background: white;
   padding: 4rem;
@@ -258,6 +274,8 @@ header .header-profile > .avatar-img {
   gap: 10px;
   display: flex;
   flex-direction: column;
+  margin: 0px 10rem;
+  margin-top: 5rem;
 }
 
 form > div {
@@ -276,18 +294,13 @@ form label {
 form input,
 textarea {
   color: #333;
-  padding: 2rem;
+  font-size: 1.2rem;
+  padding: 1.6rem;
   border: 1px solid #ebebeb;
-  font-size: 0.9rem;
   letter-spacing: 0px;
   background: #f0f0f0;
   border-radius: 5px;
   font-weight: 600;
-}
-
-button {
-  border: none;
-  outline: inherit;
 }
 
 form button {
@@ -302,17 +315,17 @@ footer {
   padding: 0px 8%;
 }
 
-footer > .footer-top {
+footer>.footer-top {
   display: flex;
   justify-content: space-between;
-  padding: 7% 0;
+  padding: 3rem 0;
 }
 
 .footer-top h4 {
   margin-bottom: 1.6rem;
 }
 
-.footer-top > div:first-child {
+.footer-top>div:first-child {
   width: 40%;
 }
 
@@ -333,4 +346,96 @@ footer > .footer-top {
   justify-content: center;
   padding: 2.6rem 0;
   font-size: 0.7rem;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .subtitle {
+    font-size: 1.2rem;
+    margin: 0px 0px;
+  }
+
+  .paragraph {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  h4 {
+    font-size: 1.0rem;
+  }
+
+  header>nav {
+    display: none;
+  }
+
+  header .fa {
+    display: block;
+    font-size: 1.8rem;
+    padding: 30px 20px;
+    align-self: center;
+    cursor: pointer;
+  }
+
+  .section-home>p {
+    margin: 0px;
+    font-size: 1.2rem;
+  }
+
+  .section-about-me-content {
+    /* Change number of columns */
+    grid-template-columns: 1fr;
+    row-gap: 60px;
+  }
+
+  .section-projects>ul li {
+    /* Change number of columns */
+    grid-template-columns: 1fr;
+    row-gap: 1.6rem;
+  }
+
+  .section-projects .project-content {
+    /* Center objects */
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section-contact>form {
+    padding: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .section-contact input,
+  textarea {
+    color: #333;
+    font-size: 0.8rem;
+  }
+
+  form button {
+    align-self: stretch;
+  }
+
+  footer>.footer-top {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+
+  .footer-top>div:first-child {
+    width: auto;
+  }
+
+
 }
